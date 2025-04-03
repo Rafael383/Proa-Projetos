@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+</head>
+<body>
+    <script>
+        // 9) ar puro, finalmente
+
+
+        var usuario = prompt("qual o nome do usuario? ")
+        var nomeEmpresa = prompt("nomeEmpresa da empresa:");
+        var servico = parseFloat(prompt("Valor por aparelho:"));
+        var quantidade = parseInt(prompt("Quantidade de aparelhos:"));
+        var desconto = parseFloat(prompt("Porcentagem de desconto:"));
+        var minimo = parseInt(prompt("Mínimo de aparelhos para desconto:"));
+        
+
+        var total = servico * quantidade;
+        if (quantidade > minimo) {
+            total = total - (total * desconto / 100);
+        }
+
+        var menorValor = total;
+        var empresaMenorValor = nomeEmpresa;
+
+        alert("O serviço de " + nomeEmpresa + " custará R$ " + total.toFixed(2));
+
+        var continuar = prompt("Cadastrar outra empresa? (S/N)");
+        while (continuar.toUpperCase() === 'S') {
+            nomeEmpresa = prompt("nome da empresa:");
+            servico = parseFloat(prompt("Valor por aparelho R$:"));
+            quantidade = parseInt(prompt("Quantidade de aparelhos:"));
+            desconto = parseFloat(prompt("Porcentagem de desconto (%):"));
+            minimo = parseInt(prompt("Mínimo de aparelhos para desconto:"));
+
+            total = servico * quantidade;
+            if (quantidade > minimo) {
+                total = total - (total * desconto / 100);
+            }
+
+            total = parseInt(total * 100) / 100;
+
+            alert("O serviço de " + nomeEmpresa + " custará" + total.toFixed(2));
+
+            if (total < menorValor) {
+                menorValor = total;
+                empresaMenorValor = nomeEmpresa;
+            }
+
+            continuar = prompt(usuario+"Cadastrar outro serviço? (S/N)");
+        }
+
+        alert("Menor orçamento: " + empresaMenorValor + " por R$ " + menorValor.toFixed(2));
+        window.location.href = "index.html";
+
+    </script>
+</body>
+</html>

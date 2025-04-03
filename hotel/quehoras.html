@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 7) que horas voce pode?
+
+        var semana = prompt("Qual o dia do seu evento? ")
+        var hora = parseInt(prompt("Qual a hora do seu evento? "))
+        var empresa = prompt("Qual o nome da empresa? ")
+
+        switch (semana) {
+            case "sabado":
+            case "domingo":
+                if(hora >= 7 && hora <= 15 ){
+                    alert("Restaurante reservado para "+empresa+". "+semana+" às "+hora+"hs.")
+                }
+                else{
+                    alert("Restaurante indisponível")
+                }
+                break
+            case "segunda":
+            case "terca": 
+            case "quarta":
+            case "quinta":
+            case "sexta":
+                if(hora >=7 && hora <= 23){
+                    alert("Restaurante reservado para "+empresa+". "+semana+" às "+hora+"hs.")
+                }
+                else{
+                    alert("Restaurante indisponível")
+                }
+                break
+        }
+        window.location.href = "index.html";
+    </script>
+</body>
+</html>

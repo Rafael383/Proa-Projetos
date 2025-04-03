@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 3) com S ou com Z
+
+        var lista = "";
+        var escolha = prompt("ESCOLHA UMA OPÇÃO:\n 1 - Cadastrar hóspede \n 2 - Procurar hóspede \n 3 - Sair \n digite:")
+
+        while (escolha != 3) {
+            if (escolha === "1") {
+                if (lista === "") {
+
+                    var nomeHosp = prompt("Digite o nome do hóspede:");
+                    lista = nomeHosp;
+                    alert(nomeHosp + " foi cadastrado!");
+
+                }
+                else {
+                    var nomeHosp = prompt("Digite o nome do hóspede:");
+                    lista = lista + "," + nomeHosp;
+                    alert(nomeHosp + " foi cadastrado!");
+                }
+            }
+
+            else if (escolha === "2") {
+                var nomeHosp = prompt("Digite o nome para procurar:");
+
+                if (lista.includes(nomeHosp)) {
+                    alert(nomeHosp + " está hospedado(a)!");
+                }
+                else {
+                    alert(nomeHosp + " não encontrado(a).");
+                }
+            }
+
+            else if (escolha === "3") {
+                alert("Programa encerrado. Obrigado!");
+                break;
+            }
+
+            else {
+                alert("Opção inválida! Digite 1, 2 ou 3.");
+            }
+            escolha = prompt("ESCOLHA UMA OPÇÃO:\n 1 - Cadastrar hóspede \n 2 - Procurar hóspede \n 3 - Sair \n digite:")
+        }
+        window.location.href = "index.html";
+
+    </script>
+</body>
+
+</html>

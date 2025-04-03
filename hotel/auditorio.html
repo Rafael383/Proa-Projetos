@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 6) auditorio para quantos
+        var usuario = prompt("qual o nome do usuario? ")
+
+        var convidados = parseInt(prompt("Qual o número de convidados para o seu evento?"))
+
+        if (convidados > 350 || convidados < 0) {
+            alert("Numero de convidados invalidos")
+        }
+        else if (convidados <= 220) {
+            let cadeiras = convidados - 150
+            alert("Use o auditório Laranja (inclua mais " + cadeiras + " cadeiras)")
+        }
+        else {
+            alert("Use o auditório Colorado")
+        }
+        var escolha = prompt("Gostaria de efetuar a reserva? S/N")
+        if (escolha.toUpperCase() === "S") {
+            alert(usuario + ", reserva efetuada com sucesso.")
+        }
+        else if (escolha.toUpperCase() === "N") {
+            alert(usuario + ", reserva não efetuada.")
+        }
+        else {
+            alert("valor invalido")
+        }
+        window.location.href = "index.html";
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 8) alcool ou gasolina 
+
+        var continuar = 'S';
+        var usuario = ("Qual o nome do usuario? ")
+        while (continuar.toUpperCase() === 'S') {
+            var alcool1 = parseFloat(prompt("Álcool no Wayne Oil:"));
+            var gasolina1 = parseFloat(prompt("Gasolina no Wayne Oil:"));
+            var alcool2 = parseFloat(prompt("Álcool no Stark Petrol:"));
+            var gasolina2 = parseFloat(prompt("Gasolina no Stark Petrol:"));
+
+            var custo1, combustivel1;
+            if (alcool1 <= gasolina1 * 0.7) {
+                custo1 = alcool1 * 42;
+                combustivel1 = "álcool";
+            }
+
+            else {
+                custo1 = gasolina1 * 42;
+                combustivel1 = "gasolina";
+            }
+
+            var custo2, combustivel2;
+            if (alcool2 <= gasolina2 * 0.7) {
+                custo2 = alcool2 * 42;
+                combustivel2 = "álcool";
+            }
+            else {
+                custo2 = gasolina2 * 42;
+                combustivel2 = "gasolina";
+            }
+
+            if (custo1 < custo2) {
+                alert("Melhor no Wayne Oil com " + combustivel1);
+            }
+            else if (custo2 < custo1) {
+                alert("Melhor no Stark Petrol com " + combustivel2);
+            }
+            else {
+                alert("Os dois têm o mesmo preço");
+            }
+                continuar = prompt(usuario+"que continuar? S/N:").toUpperCase();
+
+        }
+        window.location.href = "index.html";
+
+    </script>
+</body>
+</html>

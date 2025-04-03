@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 4) festa ou trabalho
+        var usuario = prompt("qual o nome do usuario?")
+
+        let horas = parseInt(prompt("qual a duração do evento em horas "))
+        let garcons = parseInt(prompt("quantos garçoes? "))
+        var total = horas * (garcons * 10.50)
+        alert("Custo total: "+total)
+        var escolha = prompt("Gostaria de efetuar a reserva? S/N")
+        if(escolha.toUpperCase() === "S"){
+            alert(usuario+", reserva efetuada com sucesso.")
+        }
+        else if(escolha.toUpperCase() === "N"){
+            alert(usuario+", reserva não efetuada.")
+        }
+        else{
+            alert("valor invalido")
+        } 
+        window.location.href = "index.html";
+
+    </script>
+</body>
+</html>

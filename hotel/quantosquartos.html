@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 1) Quantos quartos são?
+
+        // nome do hotel
+        var NomeHotel = prompt("olá caro cliente! qual sera o nome de seu hotel? ")
+        alert("o nome do hotel é: " + NomeHotel)
+        // nome do usuario
+        var usuario = prompt("Por favor, digite o nome de seu usuario! ")
+        // senha do usuario
+        let senha = prompt("Digite a senha do seu usuario")
+        // se senha for incorreta
+        if (senha != 2678) {
+            alert("senha errada, por favor tentar novamente!")
+        }
+        // se senha for correta
+        else {
+            // bem vindo
+            alert("Bem vindo ao hotel " + NomeHotel + ", " + usuario)
+            // diaria
+            var diaria = parseFloat(prompt("Digite o valor da diaria: "))
+            var diasHosp = parseInt(prompt("Digite a quantidade de dias de hospedagem: "))
+            // tratamento de erro diaria
+            if (diaria && diasHosp < 0 || diaria && diasHosp > 30) {
+                alert("Valor Invalido, " + usuario)
+            }
+            else {
+                var nomeHosp = prompt("Digite o nome do hospede: ")
+                var confirma = prompt(usuario + ", Voce confirma a reserva para " + nomeHosp + " por " + diasHosp + " dias? S/N")
+            }
+            // confirma sim ou nao
+            if (confirma.toUpperCase() === "N") {
+                alert("nao confirmado")
+            }
+            else if (confirma.toUpperCase() === "S") {
+                alert(usuario + ", reserva efetuada")
+            }
+            else {
+                alert("Valor Invalido")
+            }
+        }
+        window.location.href = "index.html";
+
+    </script>
+</body>
+</html>

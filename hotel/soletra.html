@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 2) Como soletra?
+
+        var diaria = parseInt(prompt("Qual o valor padrão da diaria: "))
+        var usuario = prompt("Por favor, digite o nome do usuario ")
+        var nomeHosp = prompt("Por favor, digite o nome do hospede! e digite PARE para encerrar ")
+        var meia = 0
+        var gratuidade = 0
+        var hosp = 0
+
+        while (nomeHosp.toUpperCase() != "PARE") {
+            var idadeHosp = parseInt(prompt("Digite a idade do hospede: "))
+            if (idadeHosp > 6 && idadeHosp < 60) {
+                alert(nomeHosp + " cadastrada(o) com sucesso.")
+            }
+
+            else if (idadeHosp > 60) {
+                meia++
+                alert(nomeHosp + " cadastrada(o) com sucesso. " + nomeHosp + " paga meia")
+            }
+
+            else if (idadeHosp > 0) {
+
+                gratuidade++
+                alert(nomeHosp + " cadastrada(o) com sucesso. " + nomeHosp + " possui gratuidade")
+            }
+
+hosp = hosp++;
+            nomeHosp = prompt("Digite o nome do hospede: ")
+        }
+        var valorTotal = (diaria * hosp) + (meia * (diaria / 2))
+        alert(usuario + ", o valor total das hospedagens é: " + valorTotal + "; " + gratuidade + " gratuidade(s); " + meia + " meia(s)")
+        window.location.href = "index.html";
+    </script>
+</body>
+
+</html>
