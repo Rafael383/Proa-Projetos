@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n1 = parseInt(prompt("digite sua primeira nota: ")), n2 = parseInt(prompt("digite sua primeira nota: ")), n3 = parseInt(prompt("digite sua primeira nota: "));
+        media = (n1 + n2 + n3) / 3
+        document.write("sua media é: " + media)
+        if (media >= 7) {
+            document.write("Voce esta aprovado!")
+        }
+        else if(media == 6) {
+            document.write("Voce esta de recuperação!")
+        }
+        else {
+            document.write("Voce esta reprovado!")
+        }   
+    </script>
+</body>
+</html>

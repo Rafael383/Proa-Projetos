@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 5) Escreva um programa que leia o preço de um produto e a quantidade comprada, e calcule o valor total a ser pago com desconto de 10% se a quantidade for maior que 10 unidades. -->
+    <script>
+        let produto = parseFloat(prompt("qual o preço do produto? ")), quantidade = parseFloat(prompt("qual a quantia comprada? "))
+
+        if(quantidade >= 10){
+            var total = produto - ((10 * produto) / 100)
+            total = total * quantidade
+            document.write("o total a pagar sera: " + total + " com 10% de desconto")
+        }
+        else{
+            produto = produto * quantidade
+            document.write("o total a pagar sera: " + produto)
+        }
+    </script>
+</body>
+</html>

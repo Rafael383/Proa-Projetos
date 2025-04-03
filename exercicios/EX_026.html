@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let produto = prompt("Você escolhe entre: " + "\n" + "Coxinha" + "\n" + "Risole" + "\n" + "Uva")
+        alert("O valor do produto é: 60 (0001)" + "\n" +  "O valor do produto é 90 (0002)" + "\n" + "O valor do produto é: 120 (0003)")
+  
+        let codigo = parseInt(prompt("Qual o código do produto? "))
+        let quantidade = parseInt(prompt("Informe a quantos são: "))
+  
+      if(codigo == "0001"){
+        document.write("O valor a ser pago é: " + 60*quantidade)
+      }
+      else if(codigo == "0002"){
+        document.write("O valor a ser pago é: " + 90*quantidade)
+      }
+      else if(codigo == "0003"){
+        document.write("O valor a ser pago é: " + 120*quantidade)
+      }else{
+        document.write("retorne ao menu")
+      }
+          
+      </script>
+
+
+</body>
+</html>

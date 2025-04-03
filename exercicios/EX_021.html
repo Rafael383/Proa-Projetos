@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let P1 = parseInt(prompt("qual sua idade? ")), P2 = parseInt(prompt("qual sua idade? ")), P3 = parseInt(prompt("qual sua idade? "));
+        var menores = 0;
+        var maiores = 0;
+        if (P1 > 18) {
+            maiores++;
+        }
+        else{
+            menores++;
+        }
+
+        if (P2 > 18) {
+            maiores++;
+        }   
+        else{
+            menores++;
+        }
+
+        if (P3 > 18) {
+            maiores++;
+        }
+        else{
+            menores++;
+        }
+
+        document.write("a quantidade de pessoas menores de idade é: " + maiores + " e maiores é: " + menores)
+
+    </script>
+</body>
+
+</html>

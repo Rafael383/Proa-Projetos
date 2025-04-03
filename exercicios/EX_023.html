@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let dias;
+
+        if (mes === "janeiro" || mes === "março" || mes === "maio" || mes === "julho" || mes === "agosto" || mes === "outubro" || mes === "dezembro") {
+            document.write("seu mes tem "+dias);
+            dias = 31;
+        }
+
+        else if (mes === "abril" || mes === "junho" || mes === "setembro" || mes === "novembro") {
+            document.write("seu mes tem "+dias);
+            dias = 30;
+        }
+
+        else if (mes === "fevereiro") {
+            document.write("seu mes tem "+dias);
+            dias = 28; // Não considera anos bissextos
+        }
+         
+        else {
+            document.write("Mês inválido!");
+            dias = null;
+        }
+    </script>
+</body>
+
+</html>
