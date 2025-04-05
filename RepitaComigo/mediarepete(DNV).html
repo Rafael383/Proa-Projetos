@@ -12,10 +12,9 @@
       var contador = 1;
 
       while (contador <= 6) {
-        let notaTexto = prompt("Digite a nota " + contador + " (0 a 10):");
-        let nota = parseFloat(notaTexto);
-        if (nota >= 0 && nota <= 10 && nota == notaTexto) {
-          somaNotas += nota;
+        let notaTexto = parseFloat(prompt("Digite a nota " + contador + " (0 a 10):"));
+        if (notaTexto >= 0 && notaTexto <= 10) {
+          somaNotas += notaTexto;
           contador++;
         } else {
           alert("Nota inválida! Digite um valor entre 0 e 10.");
