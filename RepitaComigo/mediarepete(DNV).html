@@ -14,11 +14,7 @@
       while (contador <= 6) {
         let notaTexto = prompt("Digite a nota " + contador + " (0 a 10):");
         let nota = parseFloat(notaTexto);
-
-        if (nota >= 0 &&
-          nota <= 10 &&
-          nota == notaTexto
-        ) {
+        if (nota >= 0 && nota <= 10 && nota == notaTexto) {
           somaNotas += nota;
           contador++;
         } else {
@@ -27,7 +23,7 @@
       }
 
       let media = somaNotas / 6;
-      document.write("Média final: <strong>" + media.toFixed(2) + "</strong>");
+      document.write("Média final: " + media.toFixed(2));
     </script>
   </body>
 </html>
