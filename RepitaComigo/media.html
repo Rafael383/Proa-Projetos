@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var soma = 0;
+      var quantidade = 0;
+      var cont = 15;
+      for (cont = 15; cont <= 100; cont++) {
+        soma += cont;
+        quantidade++;
+      }
+
+      let media = soma / quantidade;
+
+      document.write("Média aritmética: " + media.toFixed(2));
+    </script>
+  </body>
+</html>
